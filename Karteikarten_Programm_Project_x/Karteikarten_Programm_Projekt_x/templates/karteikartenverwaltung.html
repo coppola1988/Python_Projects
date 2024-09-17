@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container">
+  <!-- Flash Messages -->
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %}
+  <div class="flash-messages">
+    {% for category, message in messages %}
+    <div class="alert {{ category }}">{{ message }}</div>
+    {% endfor %}
+  </div>
+  {% endif %} {% endwith %}
+  <table>
+    <thead>
+      <tr>
+        <th class="kartentyp">Kartentyp</th>
+        <th>Front</th>
+        <th>Back</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for number, key, value in cards %}
+      <tr
+        onclick="window.location='/card_detail/{{ key }}';"
+        style="cursor: pointer"
+      >
+        <td>{{ json_file }}</td>
+        <td>{{ key }}</td>
+        <td>{{ value }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- <script>
+  // Enhance accessibility by indicating clickable rows to screen readers
+  document.querySelectorAll("tr[onclick]").forEach((row) => {
+    row.setAttribute("tabindex", "0"); // Make the row focusable
+    row.setAttribute("role", "link"); // Indicate the row acts as a link
+  });
+</script> -->
+
+{% endblock %}

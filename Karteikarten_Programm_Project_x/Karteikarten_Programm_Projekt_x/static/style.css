@@ -1,0 +1,228 @@
+body {
+  background: rgb(52, 50, 50);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(63, 60, 60);
+  width: 700px;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+  /* border-collapse: collapse; */
+  /* border: 1px solid rgba(18, 17, 17, 0.5); */
+}
+p {
+  padding: 0 10px;
+  font-weight: bold;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(63, 60, 60);
+  width: 600px;
+  margin: 20px auto;
+  border: 1px solid rgba(18, 17, 17, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+}
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+
+  /* padding: 20px; */
+}
+td {
+  padding: 10px;
+  text-align: left;
+}
+th {
+  border-bottom: 1px solid rgba(18, 17, 17, 0.5);
+  padding: 5px 10px;
+  text-align: left;
+}
+.erste {
+  padding-top: 30px;
+}
+tbody tr:hover {
+  background-color: rgb(38, 37, 37);
+  cursor: pointer;
+  border-radius: 10px;
+}
+.navbar div:hover {
+  cursor: pointer;
+  border: 1px solid rgb(38, 37, 37);
+  /* border-radius: 10px; */
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.select1 {
+  margin-right: 5rem;
+}
+select {
+  margin: 2rem 0;
+  height: 2rem;
+  border-radius: 5px;
+  background: rgb(87, 87, 87);
+  color: white;
+}
+.select2 {
+  margin-left: 6rem;
+}
+
+.textfeld {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+input {
+  min-height: 2rem;
+  max-width: 31rem;
+  min-width: 31rem;
+  width: 31rem;
+  margin: 0.5rem 2rem;
+  background: rgb(87, 87, 87);
+  color: white;
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0 0.5rem;
+}
+
+.hinzu-speichern,
+.hinzu-neu {
+  margin: 3rem 0 2rem 0;
+  position: relative;
+
+  background: rgb(87, 87, 87);
+  color: white;
+  height: 1.5rem;
+  border-radius: 3px;
+}
+
+.hinzu-neu {
+  right: -2rem;
+  top: -6.5rem;
+}
+
+.hinzu-speichern {
+  left: 28.6rem;
+}
+
+.kartentyp {
+  width: 100px;
+}
+
+.kartee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.kartee input,
+.kartee label {
+  margin: 1rem 1rem;
+}
+
+.submit-btn {
+  margin: 1rem 3rem;
+  text-align: center;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 15px;
+  border: none;
+  font-weight: 600;
+}
+
+.delete {
+  position: relative;
+  top: -4.65rem;
+  left: 12rem;
+  background-color: rgb(255, 25, 25);
+
+  color: white;
+}
+.go-back {
+  position: relative;
+  top: -8.65rem;
+  left: 23.5rem;
+}
+
+.edit_header {
+  text-align: center;
+}
+
+.editer {
+  padding-top: 3rem;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dropdown label {
+  margin-left: 2rem;
+}
+.flash-messages {
+  margin: 20px 0;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert.success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert.warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+
+.alert.danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+label {
+  margin-left: 2rem;
+}
+
+.textfeld_neu {
+  text-align: center;
+  padding-top: 2rem;
+}
+.textfeld_neukarte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textfeld_neukarte label {
+  position: relative;
+  left: -15rem;
+}
+.textfeld_neukarte button {
+  position: relative;
+  left: 13.5rem;
+}
+.neu_karte {
+  min-height: 22rem;
+}

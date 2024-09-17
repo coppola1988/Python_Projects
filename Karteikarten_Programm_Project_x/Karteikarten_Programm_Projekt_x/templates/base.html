@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stapelübersicht</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navigation">
+        <p><a href="{{ url_for('index')}}">Stapelübersicht</a></p>
+      </div>
+      <div>
+        <p><a href="{{ url_for('hinzufuegen')}}">Hinzufügen</a></p>
+      </div>
+      <div>
+        <p>
+          <a href="{{ url_for('karteikartenverwaltung')}}"
+            >Karteikartenverwaltung</a
+          >
+        </p>
+      </div>
+      <div>
+        <p>Statistiken</p>
+      </div>
+      <div>
+        <p>Synchronisieren</p>
+      </div>
+    </nav>
+    {% block content%} 
+    
+    
+    {% endblock %}
+  </body>
+</html>

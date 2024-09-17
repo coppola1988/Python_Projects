@@ -1,0 +1,63 @@
+{% extends "base.html"%} 
+{% block content%}
+<div class="container">
+  <div class="dropdown">
+    <form>
+      <select class="select1">
+        <option>Dropdown Karteikarten Art</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+
+      <select
+        id="dropdownSelect"
+        class="select2"
+        onchange="handleDropdownChange()"
+      >
+        <option value="">Stapel</option>
+        <a href=""></a>
+        <option value="neu"><a href="{{url_for('new_page')}}">Neu</a></option>
+        <option value="existing">Bestehende Karten</option>
+      </select>
+    </form>
+
+    <form method="POST" class="textfeld" action="{{url_for('hinzufuegen')}}">
+      <label for="front">Front</label>
+      <input
+        required
+        id="front"
+        type="text"
+        name="front"
+        placeholder="Question..."
+      />
+      <label for="back">Back</label>
+      <input
+        required
+        id="back"
+        type="text"
+        name="back"
+        placeholder="Answer..."
+      />
+      <button class="hinzu-speichern" type="submit">Speichern</button>
+    </form>
+    <!--Bearbeitet Daniele 06.09.2024-->
+    <form action="{{url_for('new_page')}}" method="GET"> 
+      <button name="stapel" class="hinzu-neu" type="submit">
+        Neuer Stapel
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- <script type="text/javascript">
+  function handleDropdownChange() {
+    var selectElement = document.getElementById("dropdownSelect");
+    var selectedValue = selectElement.value;
+
+    if (selectedValue === "neu") {
+      window.location.href = "{{ url_for('new_page') }}";
+    }
+  }
+</script> -->
+{% endblock %}

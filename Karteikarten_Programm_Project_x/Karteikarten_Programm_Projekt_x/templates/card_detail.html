@@ -1,0 +1,38 @@
+{% extends "base.html" %} 
+{% block content %}
+<div class="container">
+  <h2>Card Details in {{ category }}</h2>
+  <form
+    method="POST"
+    action="{{ url_for('card_detail', category=category, key=key) }}"
+  >
+    <label for="new_key">Front</label>
+    <input type="text" id="new_key" name="new_key" value="{{ key }}" required />
+    <label for="new_value">Back</label>
+    <input
+      type="text"
+      id="new_value"
+      name="new_value"
+      value="{{ details }}"
+      required
+    />
+    <button type="submit">Update Card</button>
+  </form>
+  <form
+    method="POST"
+    action="{{ url_for('delete_card', category=category, key=key) }}"
+    style="margin-top: 10px"
+  >
+    <button
+      type="submit"
+      name="delete"
+      style="background-color: red; color: white"
+    >
+      Delete Card
+    </button>
+  </form>
+  <a href="{{ url_for('karteikartenverwaltung', category=category) }}"
+    >Back to Cards</a
+  >
+</div>
+{% endblock %}

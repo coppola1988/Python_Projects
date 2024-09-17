@@ -1,0 +1,36 @@
+{% extends "base.html"%} {% block content %}
+
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Stapel</th>
+        <th>Neu</th>
+        <th>Lernen</th>
+        <th>Fällig</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="hover">
+        <td class="erste">Abschlussprüfung Teil 1</td>
+        <td class="erste">20</td>
+        <td class="erste">2</td>
+        <td class="erste">40</td>
+      </tr>
+      <tr>
+        <td>Englisch</td>
+        <td>25</td>
+        <td>3</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>SQL</td>
+        <td>25</td>
+        <td>4</td>
+        <td>20</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
